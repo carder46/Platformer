@@ -46,7 +46,8 @@ radius = 18.1108
 [node name="SpinningBlade" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=["Deadly"]]
+autoplay = "Spin"
 playback_speed = -3.0
 anims/RESET = SubResource( 1 )
 anims/Spin = SubResource( 2 )
