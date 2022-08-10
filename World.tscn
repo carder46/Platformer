@@ -322,8 +322,10 @@ position = Vector2( 389, 120 )
 [node name="Button" parent="DoorandButton" index="1"]
 position = Vector2( -296, 23 )
 
-[node name="SpinningBlade" parent="." instance=ExtResource( 6 )]
+[node name="SpinningBlade" parent="." groups=["Deadly"] instance=ExtResource( 6 )]
 position = Vector2( 81, 191 )
+
+[node name="Area2D" parent="SpinningBlade/Path2D/PathFollow2D/Sprite" index="0" groups=["Deadly"]]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
