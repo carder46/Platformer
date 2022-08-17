@@ -75,5 +75,3 @@ frame = 1
 autoplay = "Spikes"
 anims/RESET = SubResource( 2 )
 anims/Spikes = SubResource( 3 )
-
-[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]

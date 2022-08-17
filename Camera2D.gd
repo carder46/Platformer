@@ -9,7 +9,7 @@ func _ready():
 	position = target.global_position
 	zoom = Vector2(.3,.3)
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("zoom"):
 		if zoomed:
 			target = null
