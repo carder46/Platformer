@@ -360,8 +360,12 @@ font_data = ExtResource( 11 )
 [node name="World" type="Node2D"]
 script = ExtResource( 8 )
 
-[node name="TheMidnightBackground" type="Sprite" parent="."]
-position = Vector2( 648, 368 )
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="TheMidnightBackground" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 643, 374 )
 scale = Vector2( 5.0625, 4.08889 )
 texture = ExtResource( 9 )
 
