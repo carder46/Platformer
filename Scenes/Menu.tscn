@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Menu.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Menu.gd" type="Script" id=1]
 [ext_resource path="res://photo-1553095066-5014bc7b7f2d.jpg" type="Texture" id=2]
 
 [sub_resource type="DynamicFontData" id=1]
