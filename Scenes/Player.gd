@@ -58,8 +58,10 @@ func _physics_process(delta):
 		player_state = state.IDLE
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		player_state = state.STARTJUMP
+		$"../Jump".play()
 	elif velocity.x != 0:
 		player_state = state.RUNNING
+
 	
 	if not is_on_floor():
 		if velocity.y <0:
@@ -79,3 +81,4 @@ func _on_DeathZone_area_entered(area):
 	if area.is_in_group("Deadly"):
 		if GameStats.check_reset() == false:
 			global_position = GameStats.get_spawn().global_position
+			$"../Death".play()
