@@ -554,7 +554,7 @@ scale = Vector2( 5.0625, 4.08889 )
 texture = ExtResource( 9 )
 
 [node name="Backgroundyes" type="Sprite" parent="."]
-position = Vector2( 645, 365 )
+position = Vector2( 644, 365 )
 scale = Vector2( 6, 6 )
 texture = ExtResource( 21 )
 hframes = 10
