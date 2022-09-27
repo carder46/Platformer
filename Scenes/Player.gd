@@ -82,3 +82,11 @@ func _on_DeathZone_area_entered(area):
 		if GameStats.check_reset() == false:
 			global_position = GameStats.get_spawn().global_position
 			$"../Death".play()
+
+
+
+func _on_Area2D_area_entered(area):
+	if area.is_in_group("Win"):
+		if GameStats.check_reset() == false:
+			get_tree().change_scene("res://Scenes/GameOver.tscn")
+			
