@@ -571,7 +571,7 @@ anims/RESET = SubResource( 46 )
 anims/bg = SubResource( 47 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 74, 594 )
+position = Vector2( 48, 66 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 646, 361 )
