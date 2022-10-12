@@ -1,10 +1,10 @@
-extends CanvasLayer
+extends Control
+
+
+func _on_Restart_pressed():
+	get_tree().change_scene("res://World.tscn")
 
 
 
-func _on_RestartButton_pressed():
-	get_tree().change_scene("res://World.gd")
-
-
-func _on_QuitButton_pressed():
+func _on_Quit_pressed():
 	get_tree().quit()
