@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/tiles/tileset.png" type="Texture" id=2]
@@ -288,6 +288,11 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -0.0384598, -45, 0, 0, 0, 0, 397.077, -47, 0, 0, 0, 0, 398.038, -16, 0, 0, 0, 0, 384.577, -16, 0, 0, 0, 0, 383.615, 0, 0, 0, 0, 0, 0.923073, 0, 0, 0, 0, 0, -0.0384598, -45 )
 }
 
+[sub_resource type="Curve2D" id=49]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 33, -46, 0, 0, 0, 0, 1, -46, 0, 0, 0, 0, 1, -62, 0, 0, 0, 0, 20, -62, 0, 0, 0, 0, 97, -62, 0, 0, 0, 0, 97, -78, 0, 0, 0, 0, 145, -78, 0, 0, 0, 0, 145, -94, 0, 0, 0, 0, 225, -94, 0, 0, 0, 0, 224, -110, 0, 0, 0, 0, 321, -110, 0, 0, 0, 0, 321, -94, 0, 0, 0, 0, 321, -78, 0, 0, 0, 0, 305, -78, 0, 0, 0, 0, 305, -94, 0, 0, 0, 0, 241, -94, 0, 0, 0, 0, 241, -78, 0, 0, 0, 0, 225, -78, 0, 0, 0, 0, 225, -62, 0, 0, 0, 0, 193, -62, 0, 0, 0, 0, 193, -46, 0, 0, 0, 0, 162, -46, 0, 0, 0, 0, 161, -30, 0, 0, 0, 0, 33, -30, 0, 0, 0, 0, 33, -46 )
+}
+
 [sub_resource type="ConvexPolygonShape2D" id=32]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
@@ -558,6 +563,7 @@ scale = Vector2( 5.0625, 4.08889 )
 texture = ExtResource( 9 )
 
 [node name="Backgroundyes" type="Sprite" parent="."]
+visible = false
 position = Vector2( 644, 365 )
 scale = Vector2( 6, 6 )
 texture = ExtResource( 21 )
@@ -571,7 +577,7 @@ anims/RESET = SubResource( 46 )
 anims/bg = SubResource( 47 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 170, 520 )
+position = Vector2( 515, 41 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 646, 361 )
@@ -1333,6 +1339,25 @@ rotation = -0.00503642
 
 [node name="Area2D" parent="Blades/SpinningBlade/Path2D/PathFollow2D/Sprite" index="0" groups=["Deadly"]]
 
+[node name="SpinningBlade2" parent="Blades" instance=ExtResource( 6 )]
+position = Vector2( 527, 494 )
+
+[node name="AnimationPlayer" parent="Blades/SpinningBlade2" index="0"]
+root_node = NodePath("../../SpinningBlade2")
+
+[node name="Path2D" parent="Blades/SpinningBlade2" index="1"]
+curve = SubResource( 49 )
+
+[node name="PathFollow2D" parent="Blades/SpinningBlade2/Path2D" index="0"]
+position = Vector2( 33, -46 )
+rotation = 3.14159
+
+[node name="Sprite" parent="Blades/SpinningBlade2/Path2D/PathFollow2D" index="0"]
+scale = Vector2( 0.539899, 0.537843 )
+
+[node name="CollisionShape2D" parent="Blades/SpinningBlade2/Path2D/PathFollow2D/Sprite/Area2D" index="0"]
+position = Vector2( 0.0601501, 0.0127258 )
+
 [node name="AudioStreamPlayer2" parent="." instance=ExtResource( 12 )]
 
 [node name="AudioStreamPlayer3" parent="." instance=ExtResource( 12 )]
@@ -1420,6 +1445,7 @@ shape = SubResource( 48 )
 [editable path="Doors/DoorandButton4"]
 [editable path="Doors/DoorandButton5"]
 [editable path="Blades/SpinningBlade"]
+[editable path="Blades/SpinningBlade2"]
 [editable path="Spike_Spitter"]
 [editable path="Spike_Spitter2"]
 [editable path="Spike_Spitter3"]
