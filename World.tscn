@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/tiles/tileset.png" type="Texture" id=2]
@@ -291,6 +291,75 @@ _data = {
 [sub_resource type="Curve2D" id=49]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 33, -46, 0, 0, 0, 0, 1, -46, 0, 0, 0, 0, 1, -62, 0, 0, 0, 0, 20, -62, 0, 0, 0, 0, 97, -62, 0, 0, 0, 0, 97, -78, 0, 0, 0, 0, 145, -78, 0, 0, 0, 0, 145, -94, 0, 0, 0, 0, 225, -94, 0, 0, 0, 0, 224, -110, 0, 0, 0, 0, 321, -110, 0, 0, 0, 0, 321, -94, 0, 0, 0, 0, 321, -78, 0, 0, 0, 0, 305, -78, 0, 0, 0, 0, 305, -94, 0, 0, 0, 0, 241, -94, 0, 0, 0, 0, 241, -78, 0, 0, 0, 0, 225, -78, 0, 0, 0, 0, 225, -62, 0, 0, 0, 0, 193, -62, 0, 0, 0, 0, 193, -46, 0, 0, 0, 0, 162, -46, 0, 0, 0, 0, 161, -30, 0, 0, 0, 0, 33, -30, 0, 0, 0, 0, 33, -46 )
+}
+
+[sub_resource type="Curve2D" id=50]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 42, -12, 0, 0, 0, 0, 74, -12, 0, 0, 0, 0, 74, 0, 0, 0, 0, 0, 73, 0, 0, 0, 0, 0, 73, 3, 0, 0, 0, 0, 72, 3, 0, 0, 0, 0, 72, 4, 0, 0, 0, 0, 44, 4, 0, 0, 0, 0, 44, 3, 0, 0, 0, 0, 43, 3, 0, 0, 0, 0, 43, 0, 0, 0, 0, 0, 42, 0, 0, 0, 0, 0, 42, -12 )
+}
+
+[sub_resource type="Animation" id=51]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=52]
+resource_name = "Spin"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Animation" id=53]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=54]
+resource_name = "Spin"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
 }
 
 [sub_resource type="ConvexPolygonShape2D" id=32]
@@ -901,6 +970,22 @@ rotation = 3.14159
 position = Vector2( 59, 641 )
 rotation = 1.5708
 
+[node name="SpikeTrap73" parent="Spike Traps" instance=ExtResource( 5 )]
+position = Vector2( 732, 283 )
+rotation = 3.14159
+
+[node name="SpikeTrap74" parent="Spike Traps" instance=ExtResource( 5 )]
+position = Vector2( 748, 283 )
+rotation = 3.14159
+
+[node name="SpikeTrap75" parent="Spike Traps" instance=ExtResource( 5 )]
+position = Vector2( 764, 283 )
+rotation = 3.14159
+
+[node name="SpikeTrap76" parent="Spike Traps" instance=ExtResource( 5 )]
+position = Vector2( 780, 283 )
+rotation = 3.14159
+
 [node name="Swing Traps" type="Node2D" parent="."]
 
 [node name="SwingingTrap2" parent="Swing Traps" instance=ExtResource( 4 )]
@@ -914,6 +999,9 @@ position = Vector2( 808, 222 )
 
 [node name="AnimationPlayer" parent="Swing Traps/SwingingTrap" index="2"]
 playback_speed = 0.5
+
+[node name="SwingingTrap4" parent="Swing Traps" instance=ExtResource( 4 )]
+position = Vector2( 513, 272 )
 
 [node name="Doors" type="Node2D" parent="."]
 
@@ -1358,6 +1446,70 @@ scale = Vector2( 0.539899, 0.537843 )
 [node name="CollisionShape2D" parent="Blades/SpinningBlade2/Path2D/PathFollow2D/Sprite/Area2D" index="0"]
 position = Vector2( 0.0601501, 0.0127258 )
 
+[node name="SpinningBlade3" parent="Blades" instance=ExtResource( 6 )]
+position = Vector2( 934, 652 )
+
+[node name="AnimationPlayer" parent="Blades/SpinningBlade3" index="0"]
+root_node = NodePath("../../SpinningBlade3")
+
+[node name="Path2D" parent="Blades/SpinningBlade3" index="1"]
+curve = SubResource( 50 )
+
+[node name="PathFollow2D" parent="Blades/SpinningBlade3/Path2D" index="0"]
+position = Vector2( 42, -12 )
+rotation = 0.0
+
+[node name="Sprite" parent="Blades/SpinningBlade3/Path2D/PathFollow2D" index="0"]
+position = Vector2( 0.019165, 0.0195313 )
+scale = Vector2( 0.363144, 0.377611 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SpinningBlade4" parent="Blades" instance=ExtResource( 6 )]
+position = Vector2( 774, 588 )
+
+[node name="AnimationPlayer" parent="Blades/SpinningBlade4" index="0"]
+root_node = NodePath("../../SpinningBlade3")
+anims/RESET = SubResource( 51 )
+anims/Spin = SubResource( 52 )
+
+[node name="Path2D" parent="Blades/SpinningBlade4" index="1"]
+curve = SubResource( 50 )
+
+[node name="PathFollow2D" parent="Blades/SpinningBlade4/Path2D" index="0"]
+position = Vector2( 42, -12 )
+rotation = 0.0
+
+[node name="Sprite" parent="Blades/SpinningBlade4/Path2D/PathFollow2D" index="0"]
+position = Vector2( 0.019165, 0.0195313 )
+scale = Vector2( 0.363144, 0.377611 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SpinningBlade5" parent="Blades" instance=ExtResource( 6 )]
+position = Vector2( 486, 652 )
+
+[node name="AnimationPlayer" parent="Blades/SpinningBlade5" index="0"]
+root_node = NodePath("../../SpinningBlade3")
+anims/RESET = SubResource( 53 )
+anims/Spin = SubResource( 54 )
+
+[node name="Path2D" parent="Blades/SpinningBlade5" index="1"]
+curve = SubResource( 50 )
+
+[node name="PathFollow2D" parent="Blades/SpinningBlade5/Path2D" index="0"]
+position = Vector2( 42, -12 )
+rotation = 0.0
+
+[node name="Sprite" parent="Blades/SpinningBlade5/Path2D/PathFollow2D" index="0"]
+position = Vector2( 0.019165, 0.0195313 )
+scale = Vector2( 0.363144, 0.377611 )
+__meta__ = {
+"_edit_group_": true
+}
+
 [node name="AudioStreamPlayer2" parent="." instance=ExtResource( 12 )]
 
 [node name="AudioStreamPlayer3" parent="." instance=ExtResource( 12 )]
@@ -1446,6 +1598,9 @@ shape = SubResource( 48 )
 [editable path="Doors/DoorandButton5"]
 [editable path="Blades/SpinningBlade"]
 [editable path="Blades/SpinningBlade2"]
+[editable path="Blades/SpinningBlade3"]
+[editable path="Blades/SpinningBlade4"]
+[editable path="Blades/SpinningBlade5"]
 [editable path="Spike_Spitter"]
 [editable path="Spike_Spitter2"]
 [editable path="Spike_Spitter3"]
